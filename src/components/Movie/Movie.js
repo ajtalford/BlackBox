@@ -7,6 +7,7 @@ import FourColGrid from '../elements/FourColGrid/FourColGrid';
 import Actor from '../elements/Actor/Actor';
 import Spinner from '../elements/Spinner/Spinner';
 import './Movie.css';
+import Home from '../Home/Home';
 
 class Movie extends Component {
   state = {
@@ -77,7 +78,8 @@ class Movie extends Component {
             </FourColGrid >
           </div>
           : null }
-          {!this.state.actors && !this.state.loading ? <h1>No Movie Found!</h1> : null}
+          {/* {!this.state.actors && !this.state.loading ? <h1>No Movie Found!</h1> : null} */}
+          {!this.state.actors && !this.state.loading ? <Home /> : null}
           {this.state.loading ? <Spinner /> : null}
       </div>
     )
