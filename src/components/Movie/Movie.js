@@ -15,6 +15,7 @@ class Movie extends Component {
     directors: [],
     loading: false
   }
+
   componentDidMount() {
     if (localStorage.getItem(`${this.props.match.params.movieId}`)) {
       const state = JSON.parse(localStorage.getItem(`${this.props.match.params.movieId}`));
@@ -26,11 +27,12 @@ class Movie extends Component {
       this.fetchItems(endpoint);
     }
   }
+
   fetchItems = (endpoint) => {
     fetch(endpoint)
     .then(result => result.json())
     .then(result => {
-      // console.log
+      console.log
       if (result.status_code) {
         this.setState({ loading: false });
       } else {
@@ -80,7 +82,6 @@ class Movie extends Component {
       </div>
     )
   }
-
 }
 
 export default Movie;
