@@ -7,12 +7,13 @@ import NotFound from '../elements/NotFound/NotFound';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/BlackBox/">
+    <BrowserRouter>
       <React.Fragment>
         <Header />
         <Switch>
-          <Route path="/" component={Home} exact />
+          
           <Route path="/:movieId" component={Movie} exact />
+          <Route path="/" component={Home} exact />
           <Route component={NotFound} />
         </Switch>
       </React.Fragment>
