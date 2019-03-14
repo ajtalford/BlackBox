@@ -11,7 +11,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8"
   },
-  "homepage": "https://ajtalford.github.io/BlackBox",
+  "homepage": "http://ajtalford.github.io/BlackBox",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
